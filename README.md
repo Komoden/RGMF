@@ -8,5 +8,10 @@ RGMF:<br>
 Rød Grød Med Fløde <br>
 Really Great Minor Fixes
 
+Blocks:
+Advanced Dropper
+Advanced Hopper
+
+
 Links for us:
 http://mgstudios.weebly.com/basic-tutorials.html
