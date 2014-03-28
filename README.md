@@ -13,5 +13,9 @@ Advanced Dropper
 Advanced Hopper
 
 
+Ideas we haven't done much with yet:
+Multiblock roofs (two types of blocks)
+Powered lights (IC2 lamps that actually use EU)
+
 Links for us:
 http://mgstudios.weebly.com/basic-tutorials.html
