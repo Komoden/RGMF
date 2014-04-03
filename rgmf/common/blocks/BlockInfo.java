@@ -28,13 +28,18 @@ public class BlockInfo {
 	public static final String COLOREDSTONE_KEY = "colStone";
 	public static final int COLOREDSTONE_DEFAULT = 2077;
 	public static final String COLOREDSTONE_UNLOCALIZED_NAME = "colStone";
+	public static final String COLOREDSTONE_TEXTURE = "col_stone_";
 	public static final String[] COLOREDSTONE_NAMES = {
 			"White Stone", "Orange Stone", "Magenta Stone", "Light Blue Stone",
 			"Yellow Stone", "Light Green Stone", "Pink Stone", "Dark Grey Stone",
 			"Light Grey Stone", "Cyan Stone", "Purple Stone", "Blue Stone",
 			"Brown Stone", "Green Stone", "Red Stone", "Black Stone"
 	};
-	public static final String COLOREDSTONE_SIDE = "col_stone_side";
+	public final static String[] COLOREDSTONE_SUBNAMES = {
+			"white", "orange",  "magenta", "lightBlue", "yellow", "lightGreen",
+			"pink", "darkGrey", "lightGrey", "cyan", "purple", "blue", "brown",
+			"green", "red", "black"
+	};
 
 	public static int COLOREDBRICKS_ID;
 	public static final String COLOREDBRICKS_KEY = "colBricks";

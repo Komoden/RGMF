@@ -23,7 +23,6 @@ public class blocks {
 		advHopper = new AdvancedHopper(BlockInfo.ADVHOPPER_ID);
 		colStone = new ColoredStone(BlockInfo.COLOREDSTONE_ID);
 
-
 		GameRegistry.registerBlock(advDropper, BlockInfo.ADVDROPPER_KEY);
 		GameRegistry.registerBlock(advHopper, BlockInfo.ADVHOPPER_KEY);
 		GameRegistry.registerBlock(colStone, ColoredStoneItemBlock.class, BlockInfo.COLOREDSTONE_KEY);

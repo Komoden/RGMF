@@ -2,7 +2,6 @@ package blocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import lib.CommonProxy;
 import lib.ModInfo;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -29,30 +28,99 @@ public class ColoredStone extends Block {
 	}
 
 	@SideOnly(Side.CLIENT)
-	private Icon topIcon;
-	@SideOnly(Side.CLIENT)
-	private Icon sideIcon;
-	@SideOnly(Side.CLIENT)
-	private Icon botIcon;
+	private Icon white, orange, magenta, lightBlue, yellow, lightGreen, pink, darkGrey, lightGrey, cyan, purple, blue, brown, green, red, black;
+//	@SideOnly(Side.CLIENT)
+//	private Icon orange;
+//	@SideOnly(Side.CLIENT)
+//	private Icon magenta;
+//	@SideOnly(Side.CLIENT)
+//	private Icon lightBlue;
+//	@SideOnly(Side.CLIENT)
+//	private Icon yellow;
+//	@SideOnly(Side.CLIENT)
+//	private Icon lightGreen;
+//	@SideOnly(Side.CLIENT)
+//	private Icon pink;
+//	@SideOnly(Side.CLIENT)
+//	private Icon darkGrey;
+//	@SideOnly(Side.CLIENT)
+//	private Icon lightGrey;
+//	@SideOnly(Side.CLIENT)
+//	private Icon cyan;
+//	@SideOnly(Side.CLIENT)
+//	private Icon purple;
+//	@SideOnly(Side.CLIENT)
+//	private Icon blue;
+//	@SideOnly(Side.CLIENT)
+//	private Icon brown;
+//	@SideOnly(Side.CLIENT)
+//	private Icon green;
+//	@SideOnly(Side.CLIENT)
+//	private Icon red;
+//	@SideOnly(Side.CLIENT)
+//	private Icon black;
 
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister register){
-		topIcon = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.ADVHOPPER_TOP);
-		sideIcon = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.ADVHOPPER_SIDE);
-		botIcon = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.ADVHOPPER_BOTTOM);
+		white = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.COLOREDSTONE_TEXTURE+"white");
+		orange = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.COLOREDSTONE_TEXTURE+"orange");
+		magenta = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.COLOREDSTONE_TEXTURE+"magenta");
+		lightBlue = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.COLOREDSTONE_TEXTURE+"lightBlue");
+		yellow = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.COLOREDSTONE_TEXTURE+"yellow");
+		lightGreen = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.COLOREDSTONE_TEXTURE+"lightGreen");
+		pink = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.COLOREDSTONE_TEXTURE+"pink");
+		darkGrey = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.COLOREDSTONE_TEXTURE+"darkGrey");
+		lightGrey = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.COLOREDSTONE_TEXTURE+"lightGrey");
+		cyan = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.COLOREDSTONE_TEXTURE+"cyan");
+		purple = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.COLOREDSTONE_TEXTURE+"purple");
+		blue = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.COLOREDSTONE_TEXTURE+"blue");
+		brown = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.COLOREDSTONE_TEXTURE+"brown");
+		green = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.COLOREDSTONE_TEXTURE+"green");
+		red = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.COLOREDSTONE_TEXTURE+"red");
+		black = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.COLOREDSTONE_TEXTURE+"black");
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
 	public Icon getIcon(int side, int meta)
 	{
-		if (side == 0){
-			return botIcon;
-		}else if(side == 1) {
-			return topIcon;
-		}else{
-			return sideIcon;
+		switch(meta)
+		{
+			case 0:
+				return white;
+			case 1:
+				return orange;
+			case 2:
+				return magenta;
+			case 3:
+				return lightBlue;
+			case 4:
+				return yellow;
+			case 5:
+				return lightGreen;
+			case 6:
+				return pink;
+			case 7:
+				return darkGrey;
+			case 8:
+				return lightGrey;
+			case 9:
+				return cyan;
+			case 10:
+				return purple;
+			case 11:
+				return blue;
+			case 12:
+				return brown;
+			case 13:
+				return green;
+			case 14:
+				return red;
+			case 15:
+				return black;
+			default:
+				return null;
 		}
 	}
 
