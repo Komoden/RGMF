@@ -10,6 +10,7 @@ import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
+import net.minecraft.world.World;
 import rgmf.RGMF;
 
 import java.util.List;
@@ -55,7 +56,6 @@ public class ColoredStone extends Block {
 		}
 	}
 
-
 	@Override
 	public int damageDropped (int metadata) {
 		return metadata;
@@ -69,4 +69,8 @@ public class ColoredStone extends Block {
 		}
 	}
 
+	@Override
+	public void onBlockAdded(World world, int x, int y, int z) {
+		super.onBlockAdded(world, x, y, z);
+	}
 }
