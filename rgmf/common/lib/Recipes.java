@@ -25,4 +25,16 @@ public class Recipes {
                         });
     }
 
+    public static void addColoredStone(ItemStack coloredStone, ItemStack colorDye)
+    {
+        GameRegistry.addRecipe(coloredStone,
+                new Object[]
+                        {
+                                "SSS",
+                                "SDS",
+                                "SSS",
+                                'S', Block.stone,
+                                'D', colorDye
+                        });
+    }
 }

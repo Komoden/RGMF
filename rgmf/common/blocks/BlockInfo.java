@@ -23,4 +23,23 @@ public class BlockInfo {
     public static final String ADVHOPPER_TOP = "adv_hopper_top";
     public static final String ADVHOPPER_SIDE = "adv_hopper_side";
     public static final String ADVHOPPER_BOTTOM = "adv_hopper_bottom";
+
+    public static int COLOREDSTONE_ID;
+    public static final String COLOREDSTONE_KEY = "colStone";
+    public static final int COLOREDSTONE_DEFAULT = 2077;
+    public static final String COLOREDSTONE_UNLOCALIZED_NAME = "colStone";
+    public static final String[] COLOREDSTONE_NAMES = {
+            "White Stone", "Orange Stone", "Magenta Stone", "Light Blue Stone",
+            "Yellow Stone", "Light Green Stone", "Pink Stone", "Dark Grey Stone",
+            "Light Grey Stone", "Cyan Stone", "Purple Stone", "Blue Stone",
+            "Brown Stone", "Green Stone", "Red Stone", "Black Stone"
+    };
+    public static final String COLOREDSTONE_SIDE = "col_stone_side";
+
+    public static int COLOREDBRICKS_ID;
+    public static final String COLOREDBRICKS_KEY = "colBricks";
+    public static final int COLOREDBRICKS_DEFAULT = 2078;
+    public static final String COLOREDBRICKS_UNLOCALIZED_NAME = "colBricks";
+    public static final String COLOREDBRICKS_NAME = "Colored Bricks";
+    public static final String COLOREDBRICKSADVHOPPER_SIDE = "col_bricks_side";
 }
