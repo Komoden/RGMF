@@ -35,7 +35,7 @@ public class BlockInfo {
 			"Light Grey Stone", "Cyan Stone", "Purple Stone", "Blue Stone",
 			"Brown Stone", "Green Stone", "Red Stone", "Black Stone"
 	};
-	public final static String[] COLOREDSTONE_SUBNAMES = {
+	public final static String[] COLORED_SUBNAMES = {
 			"white", "orange",  "magenta", "lightBlue", "yellow", "lightGreen",
 			"pink", "darkGrey", "lightGrey", "cyan", "purple", "blue", "brown",
 			"green", "red", "black"
@@ -45,6 +45,12 @@ public class BlockInfo {
 	public static final String COLOREDBRICKS_KEY = "colBricks";
 	public static final int COLOREDBRICKS_DEFAULT = 2078;
 	public static final String COLOREDBRICKS_UNLOCALIZED_NAME = "colBricks";
-	public static final String COLOREDBRICKS_NAME = "Colored Bricks";
-	public static final String COLOREDBRICKSADVHOPPER_SIDE = "col_bricks_side";
+	public static final String COLOREDBRICKS_TEXTURE = "col_bricks_";
+	public static final String[] COLOREDBRICKS_NAMES = {
+			"White Bricks", "Orange Bricks", "Magenta Bricks", "Light Blue Bricks",
+			"Yellow Bricks", "Light Green Bricks", "Pink Bricks", "Dark Grey Bricks",
+			"Light Grey Bricks", "Cyan Bricks", "Purple Bricks", "Blue Bricks",
+			"Brown Bricks", "Green Bricks", "Red Bricks", "Black Bricks"
+	};
+
 }

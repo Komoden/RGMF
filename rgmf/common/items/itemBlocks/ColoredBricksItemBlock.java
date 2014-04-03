@@ -7,9 +7,9 @@ import net.minecraft.item.ItemStack;
 /**
  * Created by Komoden on 03/04/14.
  */
-public class ColoredStoneItemBlock extends ItemBlock
+public class ColoredBricksItemBlock extends ItemBlock
 {
-	public ColoredStoneItemBlock(int id) {
+	public ColoredBricksItemBlock(int id) {
 		super(id);
 		setHasSubtypes(true);
 	}

@@ -17,6 +17,7 @@ import java.util.List;
 /**
  * Created by beringtom on 29-03-14.
  */
+
 public class ColoredStone extends Block {
 
 	public ColoredStone (int id) {
@@ -29,36 +30,6 @@ public class ColoredStone extends Block {
 
 	@SideOnly(Side.CLIENT)
 	private Icon white, orange, magenta, lightBlue, yellow, lightGreen, pink, darkGrey, lightGrey, cyan, purple, blue, brown, green, red, black;
-//	@SideOnly(Side.CLIENT)
-//	private Icon orange;
-//	@SideOnly(Side.CLIENT)
-//	private Icon magenta;
-//	@SideOnly(Side.CLIENT)
-//	private Icon lightBlue;
-//	@SideOnly(Side.CLIENT)
-//	private Icon yellow;
-//	@SideOnly(Side.CLIENT)
-//	private Icon lightGreen;
-//	@SideOnly(Side.CLIENT)
-//	private Icon pink;
-//	@SideOnly(Side.CLIENT)
-//	private Icon darkGrey;
-//	@SideOnly(Side.CLIENT)
-//	private Icon lightGrey;
-//	@SideOnly(Side.CLIENT)
-//	private Icon cyan;
-//	@SideOnly(Side.CLIENT)
-//	private Icon purple;
-//	@SideOnly(Side.CLIENT)
-//	private Icon blue;
-//	@SideOnly(Side.CLIENT)
-//	private Icon brown;
-//	@SideOnly(Side.CLIENT)
-//	private Icon green;
-//	@SideOnly(Side.CLIENT)
-//	private Icon red;
-//	@SideOnly(Side.CLIENT)
-//	private Icon black;
 
 	@Override
 	@SideOnly(Side.CLIENT)

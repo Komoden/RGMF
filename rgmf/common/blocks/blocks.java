@@ -4,6 +4,7 @@ import blocks.tileEntities.*;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import items.itemBlocks.ColoredStoneItemBlock;
+import items.itemBlocks.ColoredBricksItemBlock;
 import lib.Recipes;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -17,15 +18,18 @@ public class blocks {
 	public static Block advDropper;
 	public static Block advHopper;
     public static Block colStone;
+	public static Block colBricks;
 
 	public static void init() {
 		advDropper = new AdvancedDropper(BlockInfo.ADVDROPPER_ID);
 		advHopper = new AdvancedHopper(BlockInfo.ADVHOPPER_ID);
 		colStone = new ColoredStone(BlockInfo.COLOREDSTONE_ID);
+		colBricks = new ColoredBricks(BlockInfo.COLOREDBRICKS_ID);
 
 		GameRegistry.registerBlock(advDropper, BlockInfo.ADVDROPPER_KEY);
 		GameRegistry.registerBlock(advHopper, BlockInfo.ADVHOPPER_KEY);
 		GameRegistry.registerBlock(colStone, ColoredStoneItemBlock.class, BlockInfo.COLOREDSTONE_KEY);
+		GameRegistry.registerBlock(colBricks, ColoredBricksItemBlock.class, BlockInfo.COLOREDBRICKS_KEY);
 	}
 
 	public static void addNames() {
@@ -34,9 +38,14 @@ public class blocks {
 
 		for (int ix = 0; ix < 16; ix++) {
 			ItemStack colordye  = new ItemStack(Item.dyePowder, 1, ix);
+			//coloredStone
 			ItemStack colStoneStack = new ItemStack(colStone, 1, ix);
 			Recipes.addColoredStone(colStoneStack, colordye);
 			LanguageRegistry.addName(colStoneStack, BlockInfo.COLOREDSTONE_NAMES[colStoneStack.getItemDamage()]);
+			//ColoredBricks
+			ItemStack colBricksStack = new ItemStack(colBricks, 1, ix);
+			Recipes.addColoredBricks(colBricksStack, colordye);
+			LanguageRegistry.addName(colBricksStack, BlockInfo.COLOREDBRICKS_NAMES[colBricksStack.getItemDamage()]);
 		}
 	}
 
