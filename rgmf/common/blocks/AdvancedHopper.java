@@ -23,62 +23,62 @@ import net.minecraft.world.World;
  */
 public class AdvancedHopper extends BlockContainer {
 
-    public AdvancedHopper(int id) {
-        super(id, Material.iron);
-        setCreativeTab(RGMF.rgmfTab);
-        setHardness(2f);
-        setStepSound(Block.soundMetalFootstep);
-        setUnlocalizedName(BlockInfo.ADVHOPPER_UNLOCALIZED_NAME);
-    }
+	public AdvancedHopper(int id) {
+		super(id, Material.iron);
+		setCreativeTab(RGMF.rgmfTab);
+		setHardness(2f);
+		setStepSound(Block.soundMetalFootstep);
+		setUnlocalizedName(BlockInfo.ADVHOPPER_UNLOCALIZED_NAME);
+	}
 
-    @SideOnly(Side.CLIENT)
-    private Icon topIcon;
-    @SideOnly(Side.CLIENT)
-    private Icon sideIcon;
-    @SideOnly(Side.CLIENT)
-    private Icon botIcon;
+	@SideOnly(Side.CLIENT)
+	private Icon topIcon;
+	@SideOnly(Side.CLIENT)
+	private Icon sideIcon;
+	@SideOnly(Side.CLIENT)
+	private Icon botIcon;
 
-    @Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister register){
-        topIcon = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.ADVHOPPER_TOP);
-        sideIcon = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.ADVHOPPER_SIDE);
-        botIcon = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.ADVHOPPER_BOTTOM);
-    }
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void registerIcons(IconRegister register){
+		topIcon = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.ADVHOPPER_TOP);
+		sideIcon = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.ADVHOPPER_SIDE);
+		botIcon = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.ADVHOPPER_BOTTOM);
+	}
 
 
-    @SideOnly(Side.CLIENT)
-    @Override
-    public Icon getIcon(int side, int meta) {
-        if (side == 0){
-            return botIcon;
-        }else if(side == 1) {
-            return topIcon;
-        }else{
-            return sideIcon;
-        }
-    }
+	@SideOnly(Side.CLIENT)
+	@Override
+	public Icon getIcon(int side, int meta) {
+		if (side == 0){
+			return botIcon;
+		}else if(side == 1) {
+			return topIcon;
+		}else{
+			return sideIcon;
+		}
+	}
 
-    @Override
-    public TileEntity createNewTileEntity(World world) {
-        return new TileEntityAdvHopper();
-    }
+	@Override
+	public TileEntity createNewTileEntity(World world) {
+		return new TileEntityAdvHopper();
+	}
 
-//    @Override
-//    public int getRenderType()
-//    {
-//        return 22;
-//    }
+	//    @Override
+	//    public int getRenderType()
+	//    {
+	//        return 22;
+	//    }
 
-    @Override
-    public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)
-    {
-        if(!world.isRemote)
-        {
- 			FMLNetworkHandler.openGui(player, RGMF.instance, 1, world, x, y, z);
-        }
-        return true;
-    }
+	@Override
+	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)
+	{
+		if(!world.isRemote)
+		{
+			FMLNetworkHandler.openGui(player, RGMF.instance, 1, world, x, y, z);
+		}
+		return true;
+	}
 
 	@Override
 	public void onBlockAdded(World world, int x, int y, int z) {

@@ -20,24 +20,24 @@ public class blocks {
 	public static void init() {
 		advDropper = new AdvancedDropper(BlockInfo.ADVDROPPER_ID);
 		advHopper = new AdvancedHopper(BlockInfo.ADVHOPPER_ID);
-        colStone = new ColoredStone(BlockInfo.COLOREDSTONE_ID);
+		colStone = new ColoredStone(BlockInfo.COLOREDSTONE_ID);
 
 
 		GameRegistry.registerBlock(advDropper, BlockInfo.ADVDROPPER_KEY);
 		GameRegistry.registerBlock(advHopper, BlockInfo.ADVHOPPER_KEY);
-        GameRegistry.registerBlock(colStone, BlockInfo.COLOREDSTONE_KEY);
+		GameRegistry.registerBlock(colStone, BlockInfo.COLOREDSTONE_KEY);
 	}
 
 	public static void addNames() {
 		LanguageRegistry.addName(advDropper, BlockInfo.ADVDROPPER_NAME);
 		LanguageRegistry.addName(advHopper, BlockInfo.ADVHOPPER_NAME);
 
-        for (int ix = 0; ix < 16; ix++) {
-            ItemStack colordye  = new ItemStack(Item.dyePowder, 1, ix);
-            ItemStack colStoneStack = new ItemStack(colStone, 1, ix);
-            Recipes.addColoredStone(colStoneStack, colordye);
-            LanguageRegistry.addName(colStoneStack, BlockInfo.COLOREDSTONE_NAMES[colStoneStack.getItemDamage()]);
-        }
+		for (int ix = 0; ix < 16; ix++) {
+			ItemStack colordye  = new ItemStack(Item.dyePowder, 1, ix);
+			ItemStack colStoneStack = new ItemStack(colStone, 1, ix);
+			Recipes.addColoredStone(colStoneStack, colordye);
+			LanguageRegistry.addName(colStoneStack, BlockInfo.COLOREDSTONE_NAMES[colStoneStack.getItemDamage()]);
+		}
 	}
 
 	public static void registerTileEntities()
