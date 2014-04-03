@@ -7,6 +7,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
+import rgmf.RGMF;
 
 /**
  * Created by Komoden on 05/03/14.
@@ -29,15 +30,15 @@ public class Recipes {
 				    });
 
 
-
-	    GameRegistry.addRecipe(new ItemStack(Item.clay, 1),
-			    new Object[]
-					    {
-							    "DD",
-							    "DD",
-							    'D', Block.dropper
-					    });
-
+	    if (RGMF.IsIC2Loaded) {
+		    GameRegistry.addRecipe(new ItemStack(Item.clay, 1),
+				    new Object[]
+						    {
+								    "DD",
+								    "DD",
+								    'D', "dustClay"
+						    });
+	    }
     }
 
     public static void addColoredStone(ItemStack coloredStone, ItemStack colorDye)
