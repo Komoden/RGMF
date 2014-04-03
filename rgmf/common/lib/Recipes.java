@@ -39,6 +39,7 @@ public class Recipes {
 								    'D', "dustClay"
 						    });
 	    }
+
     }
 
     public static void addColoredStone(ItemStack coloredStone, ItemStack colorDye)
