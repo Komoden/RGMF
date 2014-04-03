@@ -30,15 +30,15 @@ public class Recipes {
 				    });
 
 
-	    if (RGMF.IsIC2Loaded) {
-		    GameRegistry.addRecipe(new ItemStack(Item.clay, 1),
-				    new Object[]
-						    {
-								    "DD",
-								    "DD",
-								    'D', "dustClay"
-						    });
-	    }
+//	    if (RGMF.IsIC2Loaded) {
+//		    GameRegistry.addRecipe(new ItemStack(Item.clay, 1),
+//				    new Object[]
+//						    {
+//								    "DD",
+//								    "DD",
+//								    'D', "dustClay"
+//						    });
+//	    }
     }
 
     public static void addColoredStone(ItemStack coloredStone, ItemStack colorDye)
