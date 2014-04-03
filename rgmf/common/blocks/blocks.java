@@ -3,6 +3,7 @@ package blocks;
 import blocks.tileEntities.*;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
+import items.itemBlocks.ColoredStoneItemBlock;
 import lib.Recipes;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -25,7 +26,7 @@ public class blocks {
 
 		GameRegistry.registerBlock(advDropper, BlockInfo.ADVDROPPER_KEY);
 		GameRegistry.registerBlock(advHopper, BlockInfo.ADVHOPPER_KEY);
-		GameRegistry.registerBlock(colStone, BlockInfo.COLOREDSTONE_KEY);
+		GameRegistry.registerBlock(colStone, ColoredStoneItemBlock.class, BlockInfo.COLOREDSTONE_KEY);
 	}
 
 	public static void addNames() {
