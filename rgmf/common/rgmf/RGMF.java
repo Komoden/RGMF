@@ -1,6 +1,7 @@
 package rgmf;
 
 import blocks.client.RGMFGuiHandler;
+import cpw.mods.fml.common.Loader;
 import lib.ConfigHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -22,6 +23,7 @@ import java.util.logging.Level;
 @NetworkMod(channels = {ModInfo.NETWORK_CHANNEL}, clientSideRequired = true, serverSideRequired = false, packetHandler = ForgePacketHandler.class)
 public class RGMF
 {
+	public static boolean IsIC2Loaded;
 
 	@Instance(ModInfo.MOD_ID)
 	public static RGMF instance;
@@ -35,6 +37,10 @@ public class RGMF
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		LogHelper.log(Level.INFO, "Setting up camp");
+		IsIC2Loaded = Loader.isModLoaded("IC2");
+		if (IsIC2Loaded) {
+			LogHelper.log(Level.INFO, "Invited IC2, he said yes");
+		}
 		proxy.initSounds();
 		proxy.initRenderers();
 		LogHelper.init();

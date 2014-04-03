@@ -13,19 +13,30 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
  */
 public class Recipes {
 
+
     public static void init()
     {
         GameRegistry.addRecipe(new ItemStack(blocks.advDropper, 1),
-                new Object[]
-                        {
-                                "ILI",
-                                "RRR",
-                                "DDD",
-                                'I', Item.ingotIron,
-                                'L', Block.lever,
-                                'R', Item.redstone,
-                                'D', Block.dropper
-                        });
+		    new Object[]
+				    {
+						    "ILI",
+						    "RRR",
+						    "DDD",
+						    'I', Item.ingotIron,
+						    'L', Block.lever,
+						    'R', Item.redstone,
+						    'D', Block.dropper
+				    });
+
+
+
+	    GameRegistry.addRecipe(new ItemStack(Item.clay, 1),
+			    new Object[]
+					    {
+							    "DD",
+							    "DD",
+							    'D', Block.dropper
+					    });
 
     }
 
