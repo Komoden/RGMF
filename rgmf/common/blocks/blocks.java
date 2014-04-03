@@ -39,11 +39,11 @@ public class blocks {
 		for (int ix = 0; ix < 16; ix++) {
 			ItemStack colordye  = new ItemStack(Item.dyePowder, 1, ix);
 			//coloredStone
-			ItemStack colStoneStack = new ItemStack(colStone, 1, ix);
+			ItemStack colStoneStack = new ItemStack(colStone, 8, ix);
 			Recipes.addColoredStone(colStoneStack, colordye);
 			LanguageRegistry.addName(colStoneStack, BlockInfo.COLOREDSTONE_NAMES[colStoneStack.getItemDamage()]);
 			//ColoredBricks
-			ItemStack colBricksStack = new ItemStack(colBricks, 1, ix);
+			ItemStack colBricksStack = new ItemStack(colBricks, 8, ix);
 			Recipes.addColoredBricks(colBricksStack, colordye);
 			LanguageRegistry.addName(colBricksStack, BlockInfo.COLOREDBRICKS_NAMES[colBricksStack.getItemDamage()]);
 		}
