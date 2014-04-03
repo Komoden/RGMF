@@ -36,12 +36,12 @@ public class RGMF
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
-		LogHelper.log(Level.INFO, "Setting up camp, inviting friends");
+		LogHelper.log(Level.INFO, "Setting up camp, Rød grød med?");
 		IsIC2Loaded = Loader.isModLoaded("IC2");
 		if (IsIC2Loaded) {
-			LogHelper.log(Level.INFO, "IC2: Sure coming");
+			LogHelper.log(Level.INFO, "IC2: Fløde!");
 		}else{
-			LogHelper.log(Level.INFO, "IC2: Sorry not this time");
+			LogHelper.log(Level.INFO, "IC2: What?");
 		}
 		proxy.initSounds();
 		proxy.initRenderers();

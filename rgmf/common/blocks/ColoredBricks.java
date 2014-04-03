@@ -58,37 +58,37 @@ public class ColoredBricks extends Block {
 	{
 		switch(meta)
 		{
-			case 0:
-				return white;
-			case 1:
-				return orange;
-			case 2:
-				return magenta;
-			case 3:
-				return lightBlue;
-			case 4:
-				return yellow;
-			case 5:
-				return lightGreen;
-			case 6:
-				return pink;
-			case 7:
-				return darkGrey;
-			case 8:
-				return lightGrey;
-			case 9:
-				return cyan;
-			case 10:
-				return purple;
-			case 11:
-				return blue;
-			case 12:
-				return brown;
-			case 13:
-				return green;
-			case 14:
-				return red;
 			case 15:
+				return white;
+			case 14:
+				return orange;
+			case 13:
+				return magenta;
+			case 12:
+				return lightBlue;
+			case 11:
+				return yellow;
+			case 10:
+				return lightGreen;
+			case 9:
+				return pink;
+			case 8:
+				return darkGrey;
+			case 7:
+				return lightGrey;
+			case 6:
+				return cyan;
+			case 5:
+				return purple;
+			case 4:
+				return blue;
+			case 3:
+				return brown;
+			case 2:
+				return green;
+			case 1:
+				return red;
+			case 0:
 				return black;
 			default:
 				return null;
