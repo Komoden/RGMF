@@ -30,10 +30,10 @@ public class BlockInfo {
 	public static final String COLOREDSTONE_UNLOCALIZED_NAME = "colStone";
 	public static final String COLOREDSTONE_TEXTURE = "col_stone_";
 	public static final String[] COLOREDSTONE_NAMES = {
-			"White Stone", "Orange Stone", "Magenta Stone", "Light Blue Stone",
-			"Yellow Stone", "Light Green Stone", "Pink Stone", "Dark Grey Stone",
-			"Light Grey Stone", "Cyan Stone", "Purple Stone", "Blue Stone",
-			"Brown Stone", "Green Stone", "Red Stone", "Black Stone"
+			"Black Stone", "Red Stone", "Green Stone", "Brown Stone",
+			"Blue Stone", "Purple Stone", "Cyan Stone", "Light Grey Stone",
+			"Dark Grey Stone", "Pink Stone", "Light Green Stone", "Yellow Stone",
+			"Light Blue Stone", "Magenta Stone", "Orange Stone", "White Stone"
 	};
 	public final static String[] COLORED_SUBNAMES = {
 			"white", "orange",  "magenta", "lightBlue", "yellow", "lightGreen",
@@ -47,10 +47,10 @@ public class BlockInfo {
 	public static final String COLOREDBRICKS_UNLOCALIZED_NAME = "colBricks";
 	public static final String COLOREDBRICKS_TEXTURE = "col_bricks_";
 	public static final String[] COLOREDBRICKS_NAMES = {
-			"White Bricks", "Orange Bricks", "Magenta Bricks", "Light Blue Bricks",
-			"Yellow Bricks", "Light Green Bricks", "Pink Bricks", "Dark Grey Bricks",
-			"Light Grey Bricks", "Cyan Bricks", "Purple Bricks", "Blue Bricks",
-			"Brown Bricks", "Green Bricks", "Red Bricks", "Black Bricks"
+			"Black Stone", "Red Stone", "Green Stone", "Brown Stone",
+			"Blue Stone", "Purple Stone", "Cyan Stone", "Light Grey Stone",
+			"Dark Grey Stone", "Pink Stone", "Light Green Stone", "Yellow Stone",
+			"Light Blue Stone", "Magenta Stone", "Orange Stone", "White Stone"
 	};
 
 }
