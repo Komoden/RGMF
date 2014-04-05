@@ -14,8 +14,6 @@ import rgmf.RGMF;
  */
 public class Recipes {
 
-	public static int ClayOutput;
-
     public static void init()
     {
         GameRegistry.addRecipe(new ItemStack(blocks.advDropper, 1),
@@ -33,7 +31,7 @@ public class Recipes {
 
 	    if (RGMF.IsIC2Loaded) {
 		    if (ConfigHandler.CLAYDUST_TO_CLAY) {
-			    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Item.clay, ClayOutput),
+			    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Item.clay, ConfigHandler.CLAYOUTPUT),
 					    new Object[]
 							    {
 									    "DD",

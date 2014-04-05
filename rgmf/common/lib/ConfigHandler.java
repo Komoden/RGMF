@@ -21,6 +21,7 @@ public class ConfigHandler {
 	// dustClay to clay.
 	public static final String CATEGORY_TWEEKS = "Mod Tweeks";
 	public static boolean CLAYDUST_TO_CLAY;
+	public static int CLAYOUTPUT;
 	public static final String CLAYDUST_TO_CLAY_KEY = "Claydust_To_Clay";
 	public static final boolean CLAYDUST_TO_CLAY_DEFAULT = false;
 	public static final String CLAYDUST_OUTPUT_KEY = "Clay_Output";
@@ -32,11 +33,11 @@ public class ConfigHandler {
 		config.load();
 
 		// General
-		HARD_MODE = config.get(CATEGORY_GENERAL, HARD_MODE_KEY, HARD_MODE_DEFAULT).getBoolean(false);
+		HARD_MODE = config.get(CATEGORY_GENERAL, HARD_MODE_KEY, HARD_MODE_DEFAULT, "This does nothing!").getBoolean(false);
 
 		// Mod Tweeks
 		CLAYDUST_TO_CLAY = config.get(CATEGORY_TWEEKS, CLAYDUST_TO_CLAY_KEY, CLAYDUST_TO_CLAY_DEFAULT).getBoolean(false);
-		Recipes.ClayOutput = config.get(CATEGORY_TWEEKS, CLAYDUST_OUTPUT_KEY, CLAYDUST_TO_CLAY_DEFAULT_OUTPUT).getInt();
+		CLAYOUTPUT = config.get(CATEGORY_TWEEKS, CLAYDUST_OUTPUT_KEY, CLAYDUST_TO_CLAY_DEFAULT_OUTPUT, "Default Clay Output = 8").getInt();
 
 		// Items
 
