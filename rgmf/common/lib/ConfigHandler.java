@@ -1,6 +1,7 @@
 package lib;
 
 import blocks.BlockInfo;
+import net.minecraft.item.Item;
 import net.minecraftforge.common.Configuration;
 
 import java.io.File;
@@ -22,15 +23,24 @@ public class ConfigHandler {
 	public static boolean CLAYDUST_TO_CLAY;
 	public static final String CLAYDUST_TO_CLAY_KEY = "Claydust_To_Clay";
 	public static final boolean CLAYDUST_TO_CLAY_DEFAULT = false;
+	public static final String CLAYDUST_OUTPUT_KEY = "Clay_Output";
+	public static final int CLAYDUST_TO_CLAY_DEFAULT_OUTPUT = 8;
 
 	public static void init(File file)
 	{
 		Configuration config = new Configuration(file);
 		config.load();
 
+		// General
 		HARD_MODE = config.get(CATEGORY_GENERAL, HARD_MODE_KEY, HARD_MODE_DEFAULT).getBoolean(false);
-		CLAYDUST_TO_CLAY = config.get(CATEGORY_TWEEKS, CLAYDUST_TO_CLAY_KEY, CLAYDUST_TO_CLAY_DEFAULT).getBoolean(false);
 
+		// Mod Tweeks
+		CLAYDUST_TO_CLAY = config.get(CATEGORY_TWEEKS, CLAYDUST_TO_CLAY_KEY, CLAYDUST_TO_CLAY_DEFAULT).getBoolean(false);
+		Recipes.ClayOutput = config.get(CATEGORY_TWEEKS, CLAYDUST_OUTPUT_KEY, CLAYDUST_TO_CLAY_DEFAULT_OUTPUT).getInt();
+
+		// Items
+
+		// Blocks
 		BlockInfo.ADVDROPPER_ID = config.getBlock(BlockInfo.ADVDROPPER_KEY, BlockInfo.ADVDROPPER_DEFAULT).getInt();
 		BlockInfo.ADVHOPPER_ID = config.getBlock(BlockInfo.ADVHOPPER_KEY, BlockInfo.ADVHOPPER_DEFAULT).getInt();
 		BlockInfo.COLOREDSTONE_ID = config.getBlock(BlockInfo.COLOREDSTONE_KEY, BlockInfo.COLOREDSTONE_DEFAULT).getInt();

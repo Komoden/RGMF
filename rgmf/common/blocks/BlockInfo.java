@@ -47,10 +47,10 @@ public class BlockInfo {
 	public static final String COLOREDBRICKS_UNLOCALIZED_NAME = "colBricks";
 	public static final String COLOREDBRICKS_TEXTURE = "col_bricks_";
 	public static final String[] COLOREDBRICKS_NAMES = {
-			"Black Stone", "Red Stone", "Green Stone", "Brown Stone",
-			"Blue Stone", "Purple Stone", "Cyan Stone", "Light Grey Stone",
-			"Dark Grey Stone", "Pink Stone", "Light Green Stone", "Yellow Stone",
-			"Light Blue Stone", "Magenta Stone", "Orange Stone", "White Stone"
+			"Black Bricks", "Red Bricks", "Green Bricks", "Brown Bricks",
+			"Blue Bricks", "Purple Bricks", "Cyan Bricks", "Light Grey Bricks",
+			"Dark Grey Bricks", "Pink Bricks", "Light Green Bricks", "Yellow Bricks",
+			"Light Blue Bricks", "Magenta Bricks", "Orange Bricks", "White Bricks"
 	};
 
 }
