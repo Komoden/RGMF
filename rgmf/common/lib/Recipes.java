@@ -14,46 +14,58 @@ import rgmf.RGMF;
  */
 public class Recipes {
 
-    public static void init()
-    {
-        GameRegistry.addRecipe(new ItemStack(blocks.advDropper, 1),
-		    new Object[]
-				    {
-						    "ILI",
-						    "RRR",
-						    "DDD",
-						    'I', Item.ingotIron,
-						    'L', Block.lever,
-						    'R', Item.redstone,
-						    'D', Block.dropper
-				    });
+	public static void init()
+	{
+		GameRegistry.addRecipe(new ItemStack(blocks.advDropper, 1),
+			new Object[]
+					{
+							"ILI",
+							"RRR",
+							"DDD",
+							'I', Item.ingotIron,
+							'L', Block.lever,
+							'R', Item.redstone,
+							'D', Block.dropper
+					});
 
+		GameRegistry.addRecipe(new ItemStack(blocks.advHopper, 1),
+				new Object[]
+						{
+								"PCP",
+								"RTR",
+								"RHR",
+								'P', Block.redstoneComparatorIdle,
+								'C', Block.chest,
+								'R', Item.redstone,
+								'T', Block.trapdoor,
+								'H', Block.hopperBlock,
+						});
 
-	    if (RGMF.IsIC2Loaded) {
-		    if (ConfigHandler.CLAYDUST_TO_CLAY) {
-			    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Item.clay, ConfigHandler.CLAYOUTPUT),
-					    new Object[]
-							    {
-									    "DD",
-									    "DD",
-									    'D', "dustClay"
-							    }));
-		    }
-	    }
-    }
+		if (RGMF.IsIC2Loaded) {
+			if (ConfigHandler.CLAYDUST_TO_CLAY) {
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Item.clay, ConfigHandler.CLAYOUTPUT),
+						new Object[]
+								{
+										"DD",
+										"DD",
+										'D', "dustClay"
+								}));
+			}
+		}
+	}
 
-    public static void addColoredStone(ItemStack coloredStone, ItemStack colorDye)
-    {
-        GameRegistry.addRecipe(coloredStone,
-                new Object[]
-                        {
-                                "SSS",
-                                "SDS",
-                                "SSS",
-                                'S', Block.stone,
-                                'D', colorDye
-                        });
-    }
+	public static void addColoredStone(ItemStack coloredStone, ItemStack colorDye)
+	{
+		GameRegistry.addRecipe(coloredStone,
+				new Object[]
+						{
+								"SSS",
+								"SDS",
+								"SSS",
+								'S', Block.stone,
+								'D', colorDye
+						});
+	}
 
 	public static void addColoredBricks(ItemStack coloredBricks, ItemStack colorDye)
 	{
