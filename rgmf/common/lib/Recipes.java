@@ -31,13 +31,15 @@ public class Recipes {
 
 
 	    if (RGMF.IsIC2Loaded) {
-		    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Item.clay, 1),
-				    new Object[]
-						    {
-								    "DD",
-								    "DD",
-								    'D', "dustClay"
-						    }));
+		    if (ConfigHandler.CLAYDUST_TO_CLAY) {
+			    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Item.clay, 8),
+					    new Object[]
+							    {
+									    "DD",
+									    "DD",
+									    'D', "dustClay"
+							    }));
+		    }
 	    }
     }
 

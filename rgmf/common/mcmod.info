@@ -1,7 +1,7 @@
 [{
 "modid" : "rgmf",
 "name" : "RGMF",
-"version" : "32",
+"version" : "35",
 "credits" : "",
 "authors" : ["Komoden", "Beringtom"],
 "description" : "A mod containing blocks and items we felt we were missing for our private server",
