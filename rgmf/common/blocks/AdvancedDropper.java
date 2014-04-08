@@ -35,6 +35,8 @@ public class AdvancedDropper extends BlockContainer
 	@SideOnly(Side.CLIENT)
 	private Icon topIcon;
 	@SideOnly(Side.CLIENT)
+	private Icon sideOnIcon;
+	@SideOnly(Side.CLIENT)
 	private Icon sideIcon;
 	@SideOnly(Side.CLIENT)
 	private Icon botIcon;
@@ -43,6 +45,7 @@ public class AdvancedDropper extends BlockContainer
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister register){
 		topIcon = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.ADVDROPPER_TOP);
+		sideOnIcon = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.ADVDROPPER_SIDE_ON);
 		sideIcon = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.ADVDROPPER_SIDE);
 		botIcon = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.ADVDROPPER_BOTTOM);
 	}
@@ -56,7 +59,10 @@ public class AdvancedDropper extends BlockContainer
 		}else if(side == 1) {
 			return topIcon;
 		}else{
-			return sideIcon;
+			if (isDisabled(meta))
+				return sideIcon;
+			else
+				return sideOnIcon;
 		}
 	}
 
@@ -73,6 +79,23 @@ public class AdvancedDropper extends BlockContainer
 			FMLNetworkHandler.openGui(player, RGMF.instance, 0, world, x, y, z);
 		}
 		return true;
+	}
+
+	private boolean isDisabled(int meta)
+	{
+		return meta == 1;
+	}
+
+	@Override
+	public void onNeighborBlockChange(World world, int x, int y, int z, int blockId)
+	{
+		if (!world.isRemote)
+		{
+			if (world.isBlockIndirectlyGettingPowered(x, y, z))
+				world.setBlockMetadataWithNotify(x, y, z, 1, 3);
+			else
+				world.setBlockMetadataWithNotify(x, y, z, 0, 3);
+		}
 	}
 
 	@Override

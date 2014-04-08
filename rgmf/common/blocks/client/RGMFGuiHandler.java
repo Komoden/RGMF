@@ -26,7 +26,6 @@ public class RGMFGuiHandler implements IGuiHandler
 	@Override
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
 	{
-		System.out.println(ID);
 		TileEntity entity = world.getBlockTileEntity(x, y, z);
 		switch (ID)
 		{

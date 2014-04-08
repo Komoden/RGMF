@@ -188,10 +188,16 @@ public class TileEntityAdvDropper extends TileEntity implements IInventory
 		}
 	}
 
+	private boolean isDisabled(int meta)
+	{
+		return meta == 1;
+	}
+
 	@Override
 	public void updateEntity()
 	{
-		if (this.worldObj != null && !this.worldObj.isRemote)
+//		System.out.println(!isDisabled(this.getBlockMetadata()));
+		if (this.worldObj != null && !this.worldObj.isRemote && !isDisabled(this.getBlockMetadata()))
 		{
 			--this.dispenseCooldown;
 			if (!this.isCoolingDown())

@@ -13,6 +13,7 @@ public class BlockInfo {
 	public static final String ADVDROPPER_NAME = "Advanced Dropper";
 	public static final String ADVDROPPER_TOP = "adv_dropper_top";
 	public static final String ADVDROPPER_SIDE = "adv_dropper_side";
+	public static final String ADVDROPPER_SIDE_ON = "adv_dropper_side_on";
 	public static final String ADVDROPPER_BOTTOM = "adv_dropper_bottom";
 
 	public static int ADVHOPPER_ID;
