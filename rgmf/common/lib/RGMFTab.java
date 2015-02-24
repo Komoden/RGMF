@@ -2,6 +2,7 @@ package lib;
 
 import blocks.blocks;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 
 /**
  * Created by Komoden on 06/03/14.
@@ -15,8 +16,8 @@ public class RGMFTab extends CreativeTabs
 	}
 
 	@Override
-	public int getTabIconItemIndex()
+	public Item getTabIconItem()
 	{
-		return blocks.advDropper.blockID;
+		return Item.getItemFromBlock(blocks.advDropper);
 	}
 }

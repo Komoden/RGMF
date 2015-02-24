@@ -1,21 +1,21 @@
 package blocks;
 
 import blocks.tileEntities.TileEntityAdvHopper;
-import cpw.mods.fml.common.network.FMLNetworkHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.init.Blocks;
+import net.minecraft.util.IIcon;
 import rgmf.RGMF;
 import lib.ModInfo;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.Icon;
 import net.minecraft.world.World;
 
 /**
@@ -23,24 +23,24 @@ import net.minecraft.world.World;
  */
 public class AdvancedHopper extends BlockContainer {
 
-	public AdvancedHopper(int id) {
-		super(id, Material.iron);
+	public AdvancedHopper() {
+		super(Material.iron);
 		setCreativeTab(RGMF.rgmfTab);
 		setHardness(2f);
-		setStepSound(Block.soundMetalFootstep);
-		setUnlocalizedName(BlockInfo.ADVHOPPER_UNLOCALIZED_NAME);
+		setStepSound(Block.soundTypeMetal);
+		setBlockName(BlockInfo.ADVHOPPER_UNLOCALIZED_NAME);
 	}
 
 	@SideOnly(Side.CLIENT)
-	private Icon topIcon;
+	private IIcon topIcon;
 	@SideOnly(Side.CLIENT)
-	private Icon sideIcon;
+	private IIcon sideIcon;
 	@SideOnly(Side.CLIENT)
-	private Icon botIcon;
+	private IIcon botIcon;
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void registerIcons(IconRegister register){
+	public void registerBlockIcons(IIconRegister register){
 		topIcon = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.ADVHOPPER_TOP);
 		sideIcon = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.ADVHOPPER_SIDE);
 		botIcon = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.ADVHOPPER_BOTTOM);
@@ -49,7 +49,7 @@ public class AdvancedHopper extends BlockContainer {
 
 	@SideOnly(Side.CLIENT)
 	@Override
-	public Icon getIcon(int side, int meta) {
+	public IIcon getIcon(int side, int meta) {
 		if (side == 0){
 			return botIcon;
 		}else if(side == 1) {
@@ -60,7 +60,7 @@ public class AdvancedHopper extends BlockContainer {
 	}
 
 	@Override
-	public TileEntity createNewTileEntity(World world) {
+	public TileEntity createNewTileEntity(World world, int par2) {
 		return new TileEntityAdvHopper();
 	}
 
@@ -75,7 +75,7 @@ public class AdvancedHopper extends BlockContainer {
 	{
 		if(!world.isRemote)
 		{
-			FMLNetworkHandler.openGui(player, RGMF.instance, 1, world, x, y, z);
+			player.openGui(RGMF.instance, 1, world, x, y, z);
 		}
 		return true;
 	}
@@ -86,9 +86,9 @@ public class AdvancedHopper extends BlockContainer {
 	}
 
 	@Override
-	public void breakBlock(World world, int x, int y, int z, int id, int meta)
+	public void breakBlock(World world, int x, int y, int z, Block block, int meta)
 	{
-		TileEntity te = world.getBlockTileEntity(x, y, z);
+		TileEntity te = world.getTileEntity(x, y, z);
 		if (te != null && te instanceof IInventory)
 		{
 			IInventory inventory = (IInventory)te;
@@ -111,6 +111,6 @@ public class AdvancedHopper extends BlockContainer {
 				}
 			}
 		}
-		super.breakBlock(world, x, y, z, id, meta);
+		super.breakBlock(world, x, y, z, block, meta);
 	}
 }

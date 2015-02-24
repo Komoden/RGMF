@@ -1,17 +1,19 @@
 package lib;
 
-import cpw.mods.fml.common.network.IPacketHandler;
-import cpw.mods.fml.common.network.Player;
-import net.minecraft.network.INetworkManager;
-import net.minecraft.network.packet.Packet250CustomPayload;
+
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.network.NetworkRegistry;
+import cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 
 /**
  * Created by beringtom on 05-03-14.
  */
-public class PacketHandler implements IPacketHandler {
+public class PacketHandler{
 
-	@Override
-	public void onPacketData(INetworkManager manager, Packet250CustomPayload packet, Player player){
+	public static final SimpleNetworkWrapper INSTANCE = NetworkRegistry.INSTANCE.newSimpleChannel(ModInfo.LOWERCASE_MOD_ID);
+
+	public static void init()
+	{
 
 	}
 }

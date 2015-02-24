@@ -1,6 +1,7 @@
 package items.itemBlocks;
 
 import blocks.BlockInfo;
+import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
@@ -9,8 +10,8 @@ import net.minecraft.item.ItemStack;
  */
 public class ColoredBricksItemBlock extends ItemBlock
 {
-	public ColoredBricksItemBlock(int id) {
-		super(id);
+	public ColoredBricksItemBlock(Block block) {
+		super(block);
 		setHasSubtypes(true);
 	}
 

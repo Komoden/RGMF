@@ -40,7 +40,7 @@ public class GuiAdvDropper extends GuiContainer
 	@Override
 	protected void drawGuiContainerForegroundLayer(int par1, int par2)
 	{
-		fontRenderer.drawString("Advanced Dropper", 8, 6, 0x404040);
+		fontRendererObj.drawString("Advanced Dropper", 8, 6, 0x404040);
 	}
 
 	@Override

@@ -7,6 +7,7 @@ import items.itemBlocks.ColoredStoneItemBlock;
 import items.itemBlocks.ColoredBricksItemBlock;
 import lib.Recipes;
 import net.minecraft.block.Block;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
@@ -21,10 +22,10 @@ public class blocks {
 	public static Block colBricks;
 
 	public static void init() {
-		advDropper = new AdvancedDropper(BlockInfo.ADVDROPPER_ID);
-		advHopper = new AdvancedHopper(BlockInfo.ADVHOPPER_ID);
-		colStone = new ColoredStone(BlockInfo.COLOREDSTONE_ID);
-		colBricks = new ColoredBricks(BlockInfo.COLOREDBRICKS_ID);
+		advDropper = new AdvancedDropper();
+		advHopper = new AdvancedHopper();
+		colStone = new ColoredStone();
+		colBricks = new ColoredBricks();
 
 		GameRegistry.registerBlock(advDropper, BlockInfo.ADVDROPPER_KEY);
 		GameRegistry.registerBlock(advHopper, BlockInfo.ADVHOPPER_KEY);
@@ -37,7 +38,7 @@ public class blocks {
 		LanguageRegistry.addName(advHopper, BlockInfo.ADVHOPPER_NAME);
 
 		for (int ix = 0; ix < 16; ix++) {
-			ItemStack colordye  = new ItemStack(Item.dyePowder, 1, ix);
+			ItemStack colordye  = new ItemStack(Items.dye, 1, ix);
 			//coloredStone
 			ItemStack colStoneStack = new ItemStack(colStone, 8, ix);
 			Recipes.addColoredStone(colStoneStack, colordye);

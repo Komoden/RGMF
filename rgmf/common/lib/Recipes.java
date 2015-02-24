@@ -3,6 +3,8 @@ package lib;
 import blocks.blocks;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
@@ -22,10 +24,10 @@ public class Recipes {
 							"ILI",
 							"RRR",
 							"DDD",
-							'I', Item.ingotIron,
-							'L', Block.lever,
-							'R', Item.redstone,
-							'D', Block.dropper
+							'I', Items.iron_ingot,
+							'L', Blocks.lever,
+							'R', Items.redstone,
+							'D', Blocks.dropper
 					});
 
 		GameRegistry.addRecipe(new ItemStack(blocks.advHopper, 1),
@@ -34,16 +36,16 @@ public class Recipes {
 								"PCP",
 								"RTR",
 								"RHR",
-								'P', Block.redstoneComparatorIdle,
-								'C', Block.chest,
-								'R', Item.redstone,
-								'T', Block.trapdoor,
-								'H', Block.hopperBlock,
+								'P', Blocks.unpowered_comparator,
+								'C', Blocks.chest,
+								'R', Items.redstone,
+								'T', Blocks.trapdoor,
+								'H', Blocks.hopper,
 						});
 
 		if (RGMF.IsIC2Loaded) {
 			if (ConfigHandler.CLAYDUST_TO_CLAY) {
-				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Item.clay, ConfigHandler.CLAYOUTPUT),
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.clay_ball, ConfigHandler.CLAYOUTPUT),
 						new Object[]
 								{
 										"DD",
@@ -62,7 +64,7 @@ public class Recipes {
 								"SSS",
 								"SDS",
 								"SSS",
-								'S', Block.stone,
+								'S', Blocks.stone,
 								'D', colorDye
 						});
 	}
@@ -75,7 +77,7 @@ public class Recipes {
 								"BBB",
 								"BDB",
 								"BBB",
-								'B', Block.brick,
+								'B', Blocks.brick_block,
 								'D', colorDye
 						});
 	}

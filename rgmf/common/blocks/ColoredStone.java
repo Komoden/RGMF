@@ -5,10 +5,10 @@ import cpw.mods.fml.relauncher.SideOnly;
 import lib.ModInfo;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.Icon;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import rgmf.RGMF;
 
@@ -20,20 +20,20 @@ import java.util.List;
 
 public class ColoredStone extends Block {
 
-	public ColoredStone (int id) {
-		super(id, Material.rock);
+	public ColoredStone () {
+		super(Material.rock);
 		setCreativeTab(RGMF.rgmfTab);
 		setHardness(2f);
-		setStepSound(Block.soundStoneFootstep);
-		setUnlocalizedName(BlockInfo.COLOREDSTONE_UNLOCALIZED_NAME);
+		setStepSound(Block.soundTypeStone);
+		setBlockName(BlockInfo.COLOREDSTONE_UNLOCALIZED_NAME);
 	}
 
 	@SideOnly(Side.CLIENT)
-	private Icon white, orange, magenta, lightBlue, yellow, lightGreen, pink, darkGrey, lightGrey, cyan, purple, blue, brown, green, red, black;
+	private IIcon white, orange, magenta, lightBlue, yellow, lightGreen, pink, darkGrey, lightGrey, cyan, purple, blue, brown, green, red, black;
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void registerIcons(IconRegister register){
+	public void registerBlockIcons(IIconRegister register){
 		white = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.COLOREDSTONE_TEXTURE+"white");
 		orange = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.COLOREDSTONE_TEXTURE+"orange");
 		magenta = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.COLOREDSTONE_TEXTURE+"magenta");
@@ -54,7 +54,7 @@ public class ColoredStone extends Block {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public Icon getIcon(int side, int meta)
+	public IIcon getIcon(int side, int meta)
 	{
 		switch(meta)
 		{

@@ -2,7 +2,7 @@ package lib;
 
 import blocks.BlockInfo;
 import net.minecraft.item.Item;
-import net.minecraftforge.common.Configuration;
+import net.minecraftforge.common.config.Configuration;
 
 import java.io.File;
 
@@ -42,10 +42,6 @@ public class ConfigHandler {
 		// Items
 
 		// Blocks
-		BlockInfo.ADVDROPPER_ID = config.getBlock(BlockInfo.ADVDROPPER_KEY, BlockInfo.ADVDROPPER_DEFAULT).getInt();
-		BlockInfo.ADVHOPPER_ID = config.getBlock(BlockInfo.ADVHOPPER_KEY, BlockInfo.ADVHOPPER_DEFAULT).getInt();
-		BlockInfo.COLOREDSTONE_ID = config.getBlock(BlockInfo.COLOREDSTONE_KEY, BlockInfo.COLOREDSTONE_DEFAULT).getInt();
-		BlockInfo.COLOREDBRICKS_ID = config.getBlock(BlockInfo.COLOREDBRICKS_KEY, BlockInfo.COLOREDBRICKS_DEFAULT).getInt();
 
 		config.save();
 	}

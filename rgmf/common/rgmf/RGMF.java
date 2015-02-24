@@ -10,17 +10,14 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import lib.*;
 import blocks.blocks;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraftforge.common.network.ForgePacketHandler;
 
 import java.util.logging.Level;
 
 @Mod(modid = ModInfo.MOD_ID, name = ModInfo.MOD_NAME, version = ModInfo.MOD_VERSION)
-@NetworkMod(channels = {ModInfo.NETWORK_CHANNEL}, clientSideRequired = true, serverSideRequired = false, packetHandler = ForgePacketHandler.class)
 public class RGMF
 {
 	public static boolean IsIC2Loaded;
@@ -45,7 +42,6 @@ public class RGMF
 		}
 		proxy.initSounds();
 		proxy.initRenderers();
-		LogHelper.init();
 		ConfigHandler.init(event.getSuggestedConfigurationFile());
 		blocks.init();
 	}

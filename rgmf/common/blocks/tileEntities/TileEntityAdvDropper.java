@@ -50,7 +50,6 @@ public class TileEntityAdvDropper extends TileEntity implements IInventory
 			else
 			{
 				itemstack = itemstack.splitStack(count);
-				onInventoryChanged();
 			}
 		}
 		return itemstack;
@@ -70,19 +69,18 @@ public class TileEntityAdvDropper extends TileEntity implements IInventory
 		inventory[slot] = itemstack;
 		if (itemstack != null && itemstack.stackSize > getInventoryStackLimit())
 			itemstack.stackSize = getInventoryStackLimit();
-		onInventoryChanged();
 	}
 
 	@Override
-	public String getInvName()
+	public String getInventoryName()
 	{
 		return "Advanced Dropper";
 	}
 
 	@Override
-	public boolean isInvNameLocalized()
+	public boolean hasCustomInventoryName()
 	{
-		return true;
+		return false;
 	}
 
 	@Override
@@ -98,13 +96,13 @@ public class TileEntityAdvDropper extends TileEntity implements IInventory
 	}
 
 	@Override
-	public void openChest()
+	public void openInventory()
 	{
 
 	}
 
 	@Override
-	public void closeChest()
+	public void closeInventory()
 	{
 
 	}
@@ -138,10 +136,10 @@ public class TileEntityAdvDropper extends TileEntity implements IInventory
 	public void readFromNBT(NBTTagCompound compound)
 	{
 		super.readFromNBT(compound);
-		NBTTagList items = compound.getTagList("Items");
-		for (int i = 0; i<items.tagCount(); i++)
+		NBTTagList tagList = compound.getTagList("Items", 10);
+		for (int i = 0; i<tagList.tagCount(); i++)
 		{
-			NBTTagCompound item = (NBTTagCompound)items.tagAt(i);
+			NBTTagCompound item = tagList.getCompoundTagAt(i);
 			int slot = item.getByte("Slot");
 			if (slot >= 0 && slot < getSizeInventory())
 			{
@@ -172,7 +170,6 @@ public class TileEntityAdvDropper extends TileEntity implements IInventory
 		{
 			ItemStack itemstack1 = this.getStackInSlot(l);
 			this.setInventorySlotContents(l, null);
-			this.onInventoryChanged();
 
 			double d0 = xCoord;
 			double d1 = yCoord;
