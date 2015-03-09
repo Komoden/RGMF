@@ -3,7 +3,6 @@ package blocks;
 import blocks.tileEntities.TileEntityAdvDropper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import rgmf.RGMF;
 import lib.ModInfo;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
@@ -16,19 +15,23 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
+import rgmf.RGMF;
 
 /**
  * Created by beringtom on 04-03-14.
  */
-public class AdvancedDropper extends BlockContainer
+
+public class Conveyor extends BlockContainer
 {
 
-	public AdvancedDropper(Material iron) {
+
+
+	public Conveyor(Material iron) {
         super(iron);
 		setCreativeTab(RGMF.rgmfTab);
 		setHardness(2f);
 		setStepSound(Block.soundTypeMetal);
-		setBlockName(BlockInfo.ADVDROPPER_UNLOCALIZED_NAME);
+		setBlockName(BlockInfo.CONVEYOR_UNLOCALIZED_NAME);
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -43,10 +46,7 @@ public class AdvancedDropper extends BlockContainer
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister register){
-		topIcon = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.ADVDROPPER_TOP);
-		sideOnIcon = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.ADVDROPPER_SIDE_ON);
-		sideIcon = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.ADVDROPPER_SIDE);
-		botIcon = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.ADVDROPPER_BOTTOM);
+		topIcon = register.registerIcon(ModInfo.TEXTURE_LOCATION + ":" + BlockInfo.CONVEYOR_TEXTURE);
 	}
 
 

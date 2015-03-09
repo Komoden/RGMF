@@ -23,8 +23,8 @@ import net.minecraft.world.World;
  */
 public class AdvancedHopper extends BlockContainer {
 
-	public AdvancedHopper() {
-		super(Material.iron);
+	public AdvancedHopper(Material iron) {
+        super(iron);
 		setCreativeTab(RGMF.rgmfTab);
 		setHardness(2f);
 		setStepSound(Block.soundTypeMetal);

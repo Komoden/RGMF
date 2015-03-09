@@ -7,6 +7,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.ShapelessRecipes;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import rgmf.RGMF;
@@ -42,6 +43,12 @@ public class Recipes {
 								'T', Blocks.trapdoor,
 								'H', Blocks.hopper,
 						});
+
+        /* Temp recipe for glowstone, as glowstone is an finite item. */
+        ItemStack yellowDye = new ItemStack(Items.dye, 1, 11);
+        ItemStack redstoneDust = new ItemStack(Items.redstone);
+        ItemStack glowstoneDust = new ItemStack(Items.glowstone_dust);
+        GameRegistry.addShapelessRecipe(glowstoneDust, yellowDye, redstoneDust);
 
 		if (RGMF.IsIC2Loaded) {
 			if (ConfigHandler.CLAYDUST_TO_CLAY) {

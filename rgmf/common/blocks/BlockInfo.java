@@ -50,4 +50,10 @@ public class BlockInfo {
 			"Light Blue Bricks", "Magenta Bricks", "Orange Bricks", "White Bricks"
 	};
 
+    public static final String CONVEYOR_KEY = "conveyor";
+    public static final int CONVEYOR_DEFAULT = 2079;
+    public static final String CONVEYOR_UNLOCALIZED_NAME = "conveyor";
+    public static final String CONVEYOR_NAME = "Conveyor";
+    public static final String CONVEYOR_TEXTURE = "conveyor";
+
 }

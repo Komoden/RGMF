@@ -20,8 +20,8 @@ import java.util.List;
 
 public class ColoredBricks extends Block {
 
-	public ColoredBricks() {
-		super(Material.rock);
+	public ColoredBricks(Material iron) {
+        super(iron);
 		setCreativeTab(RGMF.rgmfTab);
 		setHardness(2f);
 		setStepSound(Block.soundTypeStone);
