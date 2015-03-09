@@ -34,6 +34,7 @@ public class Conveyor extends BlockContainer
 		setBlockName(BlockInfo.CONVEYOR_UNLOCALIZED_NAME);
 	}
 
+    // is this still needed?
 	@SideOnly(Side.CLIENT)
 	private IIcon topIcon;
 	@SideOnly(Side.CLIENT)
