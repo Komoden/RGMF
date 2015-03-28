@@ -1,0 +1,17 @@
+[
+{
+    "modid" : "rgmf",
+    "name" : "RGMF",
+    "description" : "A mod containing blocks and items we felt we were missing for our private server",
+    "version" : "38",
+    "mcversion": "${mcversion}",
+    "authorList" : ["Komoden", "Beringtom"],
+    "parent" : "",
+    "credits" : "",
+    "url" : "http://ibkicraft.dk/rgmf",
+    "updateUrl" : "",
+    "logoFile" : "",
+    "screenshots" : [],
+    "dependencies": []
+}
+]

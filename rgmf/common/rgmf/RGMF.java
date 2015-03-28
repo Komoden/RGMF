@@ -17,12 +17,12 @@ import net.minecraft.creativetab.CreativeTabs;
 
 import java.util.logging.Level;
 
-@Mod(modid = ModInfo.MOD_ID, name = ModInfo.MOD_NAME, version = ModInfo.MOD_VERSION)
+@Mod(modid = ModInfo.LOWERCASE_MOD_ID, name = ModInfo.MOD_NAME, version = ModInfo.MOD_VERSION)
 public class RGMF
 {
 	public static boolean IsIC2Loaded;
 
-	@Instance(ModInfo.MOD_ID)
+	@Instance(ModInfo.LOWERCASE_MOD_ID)
 	public static RGMF instance;
 
 	@SidedProxy(clientSide = "lib.ClientProxy", serverSide = "lib.CommonProxy")

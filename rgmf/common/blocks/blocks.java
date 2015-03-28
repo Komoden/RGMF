@@ -23,11 +23,11 @@ public class blocks {
     public static Block conveyor;
 
 	public static void init() {
-		advDropper = new AdvancedDropper();
-		advHopper = new AdvancedHopper();
-		colStone = new ColoredStone();
-		colBricks = new ColoredBricks();
-        conveyor = new Conveyor();
+		advDropper = new AdvancedDropper(Material.iron);
+		advHopper = new AdvancedHopper(Material.iron);
+		colStone = new ColoredStone(Material.iron);
+		colBricks = new ColoredBricks(Material.iron);
+        conveyor = new Conveyor(Material.iron);
 
 		GameRegistry.registerBlock(advDropper, BlockInfo.ADVDROPPER_KEY);
 		GameRegistry.registerBlock(advHopper, BlockInfo.ADVHOPPER_KEY);
